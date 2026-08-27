@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="100%" height="100%">
+  <!-- Icon Box -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="140" height="140" rx="28" fill="#ffc6ff" stroke="#18181b" stroke-width="10"/>
+    <path d="M 20 40 L 70 75 L 120 40 L 120 100 C 120 105 115 110 110 110 L 30 110 C 25 110 20 105 20 100 Z" fill="#ffffff" stroke="#18181b" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M 20 40 L 70 80 L 120 40" fill="none" stroke="#18181b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 80 20 L 60 70 L 75 70 L 62 105 L 95 60 L 78 60 Z" fill="#fbe7c6" stroke="#18181b" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+  <!-- Text Brand -->
+  <text x="175" y="90" font-family="'Space Grotesk', 'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="64" fill="#18181b" letter-spacing="-1">TEMPMAIL</text>
+  <!-- PRO Badge -->
+  <g transform="translate(485, 45)">
+    <rect x="0" y="0" width="95" height="46" rx="10" fill="#b4f8c8" stroke="#18181b" stroke-width="5"/>
+    <text x="47.5" y="31" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="26" fill="#18181b" text-anchor="middle">PRO</text>
+  </g>
+</svg>

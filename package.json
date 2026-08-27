@@ -1,0 +1,22 @@
+{
+  "name": "tempmail-pro",
+  "version": "1.0.0",
+  "description": "TempMail Pro - Soft Neobrutalism Temporary Email Scraper & Web App with automatic link extraction for Firebase / Alight Creative logins.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "tempmail",
+    "temporary-email",
+    "disposable-email",
+    "mailporary",
+    "alight-creative",
+    "soft-neobrutalism",
+    "scraper"
+  ],
+  "author": "haidarapis",
+  "license": "MIT"
+}

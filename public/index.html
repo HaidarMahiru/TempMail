@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Primary Meta Tags -->
+  <title>TempMail Pro - Email Sementara Gratis & Disposable Mail Generator</title>
+  <meta name="title" content="TempMail Pro - Email Sementara Gratis & Disposable Mail Generator">
+  <meta name="description" content="TempMail Pro adalah layanan email sementara sekali pakai (disposable mail) gratis tercepat. Gunakan untuk menerima kode verifikasi OTP, link login Firebase / Alight Creative, dan melindungi kotak masuk utama dari spam.">
+  <meta name="keywords" content="tempmail, email sementara, temporary email, disposable email, email sekali pakai, temp mail generator, mailporary, alight creative login link, otp verification email">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="TempMail Pro Team">
+  <meta name="theme-color" content="#b4f8c8">
+  <link rel="canonical" href="http://localhost:3000/">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:3000/">
+  <meta property="og:site_name" content="TempMail Pro">
+  <meta property="og:title" content="TempMail Pro - Email Sementara Gratis & Disposable Mail Generator">
+  <meta property="og:description" content="Dapatkan email sekali pakai gratis secara cepat dan aman. Terima link login Alight Creative, kode OTP, dan lindungi privasi Anda tanpa registrasi.">
+  <meta property="og:image" content="http://localhost:3000/logo.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="http://localhost:3000/">
+  <meta name="twitter:title" content="TempMail Pro - Email Sementara Gratis">
+  <meta name="twitter:description" content="Layanan email sementara sekali pakai tercepat. Terima kode OTP dan link login tanpa registrasi.">
+  <meta name="twitter:image" content="http://localhost:3000/logo.svg">
+
+  <!-- Google Structured Data / JSON-LD for Search & Google AI (SGE & Gemini Overviews) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "http://localhost:3000/#webapp",
+        "name": "TempMail Pro",
+        "url": "http://localhost:3000/",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "Layanan pembuat alamat email sementara sekali pakai gratis untuk verifikasi akun, penerimaan link login, dan perlindungan spam.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Generator Username Otomatis 3 Digit (haidarapis-XXX)",
+          "Ekstraksi Otomatis Link Login Alight Creative / Firebase",
+          "Dukungan Banyak Domain Aktif",
+          "Realtime Polling Auto Refresh Inbox",
+          "Salin Alamat Email & Link Login Satu Klik"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "http://localhost:3000/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Apa itu TempMail Pro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TempMail Pro adalah layanan email sementara sekali pakai (disposable email) gratis yang memungkinkan Anda menerima surat elektronik tanpa memerlukan pendaftaran atau kata sandi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bagaimana cara mengambil link login Alight Creative?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TempMail Pro secara otomatis mendekode pesan EML mentah dan menampilkan kotak Tautan Login Ditemukan lengkap dengan tombol Salin Link dan Buka Link secara langsung."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa lama email sementara ini berlaku?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Alamat email sementara aktif secara realtime dan dapat digunakan kapan saja. Pesan yang diterima tersimpan secara otomatis selama 24 jam."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Vector Icons (No Emoji) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Soft Neobrutalism CSS -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Centered App Main Wrapper -->
+  <div class="app-container">
+
+    <!-- Header Navigation -->
+    <header class="neo-header">
+      <div class="brand">
+        <a href="/" class="brand-link" title="TempMail Pro Beranda">
+          <img src="/logo.svg" alt="TempMail Pro Logo" class="brand-logo-img">
+        </a>
+      </div>
+
+      <div class="header-right">
+        <div class="status-pill green">
+          <span class="status-dot"></span>
+          <span id="api-status-text">Online</span>
+        </div>
+        <div class="domains-pill">
+          <i data-lucide="globe"></i>
+          <span id="domains-count-badge">6 Domain</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Card: Email Controller -->
+    <main>
+      <section class="neo-card hero-card">
+        <div class="hero-top">
+          <div class="hero-title-area">
+            <span class="neo-tag yellow">ALAMAT EMAIL SEMENTARA</span>
+            <h1>TempMail Generator</h1>
+          </div>
+
+          <!-- Auto Refresh Status -->
+          <div class="refresh-status-box">
+            <div class="auto-refresh-toggle">
+              <label class="switch">
+                <input type="checkbox" id="auto-refresh-switch" checked aria-label="Auto Refresh Switch">
+                <span class="slider"></span>
+              </label>
+              <span class="switch-label">Auto Refresh (<span id="countdown-timer">5</span>s)</span>
+            </div>
+            <div class="progress-bar-outer">
+              <div id="countdown-progress" class="progress-bar-inner"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Email Display Box -->
+        <div class="email-display-wrapper">
+          <div class="email-box">
+            <i data-lucide="mail" class="email-icon"></i>
+            <input type="text" id="current-email-input" value="Memuat..." readonly aria-label="Alamat Email Aktif">
+          </div>
+
+          <!-- Action Buttons (No Emojis - Pure SVG Icons) -->
+          <div class="email-actions">
+            <button id="btn-copy-email" class="neo-btn mint" title="Salin Email">
+              <i data-lucide="copy"></i>
+              <span>Salin Email</span>
+            </button>
+            <button id="btn-random-email" class="neo-btn pink" title="Email Acak Baru">
+              <i data-lucide="shuffle"></i>
+              <span>Acak Baru</span>
+            </button>
+            <button id="btn-manual-refresh" class="neo-btn cyan" title="Cek Mail">
+              <i data-lucide="refresh-cw" id="refresh-icon"></i>
+              <span>Cek Mail</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Actions Bar -->
+        <div class="hero-info-bar">
+          <div class="info-item">
+            <i data-lucide="inbox"></i>
+            <span>Total Pesan: <strong id="total-messages-count">0</strong></span>
+          </div>
+          <div class="info-item-action">
+            <button id="btn-simulate-mail" class="neo-btn-sm purple" title="Simulasi Email Masuk">
+              <i data-lucide="zap"></i>
+              <span>+ Test Email Alight</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Single Direct Inbox Section -->
+      <section class="neo-card inbox-card">
+        <div class="card-header">
+          <div class="header-left">
+            <div class="card-title-badge pink">KOTAK MASUK</div>
+            <h2>Daftar Pesan</h2>
+            <span class="badge-count" id="inbox-count-badge">0</span>
+          </div>
+          <div class="header-right">
+            <button id="btn-purge-inbox" class="neo-btn-sm danger" title="Bersihkan Semua Pesan">
+              <i data-lucide="trash-2"></i>
+              <span>Bersihkan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Search Box -->
+        <div class="inbox-search-box">
+          <i data-lucide="search"></i>
+          <input type="text" id="inbox-search-input" placeholder="Cari pengirim atau subjek..." aria-label="Cari Pesan Inbox">
+        </div>
+
+        <!-- Directly Expandable Inbox Items List -->
+        <div id="message-list-container" class="message-list">
+          <div class="empty-state">
+            <div class="empty-icon-box yellow">
+              <i data-lucide="mail-open"></i>
+            </div>
+            <h3>Kotak Masuk Kosong</h3>
+            <p>Kirimkan email ke alamat di atas atau klik <strong>"+ Test Email Alight"</strong> untuk melihat link login yang masuk secara langsung.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Information for Google AI & Search indexing -->
+    <footer class="neo-footer">
+      <div class="footer-content">
+        <p><strong>TempMail Pro</strong> — Layanan Email Sementara Sekali Pakai Gratis Tercepat.</p>
+        <p class="footer-sub">Melindungi kotak masuk Anda dari spam, iklan, dan mengamankan link verifikasi login secara otomatis.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

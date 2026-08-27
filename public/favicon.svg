@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="#b4f8c8" stroke="#18181b" stroke-width="24"/>
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="none" stroke="#18181b" stroke-width="24"/>
+  <!-- Envelope Shadow -->
+  <path d="M 80 160 L 256 280 L 432 160 L 432 352 L 80 352 Z" fill="#18181b"/>
+  <!-- Envelope Card -->
+  <path d="M 72 152 L 256 272 L 440 152 L 440 344 C 440 352 432 360 424 360 L 88 360 C 80 360 72 352 72 344 Z" fill="#ffffff" stroke="#18181b" stroke-width="20" stroke-linejoin="round"/>
+  <!-- Envelope Flap -->
+  <path d="M 72 152 L 256 288 L 440 152" fill="none" stroke="#18181b" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Lightning Accent -->
+  <path d="M 276 96 L 216 224 L 264 224 L 228 320 L 308 192 L 260 192 Z" fill="#ffc6ff" stroke="#18181b" stroke-width="14" stroke-linejoin="round"/>
+</svg>
