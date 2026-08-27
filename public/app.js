@@ -240,11 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function generateRandomEmail() {
     try {
-      // Generate username with 3 random digits: haidarapis-XXX (100-999)
-      const threeDigits = Math.floor(100 + Math.random() * 900);
-      const name = `haidarapis-${threeDigits}`;
-
-      const res = await fetch(`/api/create?name=${encodeURIComponent(name)}`);
+      const res = await fetch('/api/create');
       const data = await res.json();
 
       if (data.status === 'success') {
